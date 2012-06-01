@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE HTML>
+<html lang="zh-cn">
   <head>
     <title> Multi-robots Tracking System </title>
     <h1 align="center">Multi-robots Tracking System</h1>
@@ -13,8 +14,8 @@
 	p.two
 	{
 		position:fixed;
-		top:300px;
-		right:300px;
+		top:120px;
+		left:200px;
 	}
 	p.three
 	{
@@ -22,23 +23,55 @@
 		top:400px;
 		right:300px;
 	}
+	p.parm2
+	{
+		position:fixed;
+		bottom: 100px;
+		left: 250px;
+	}
+	p.video
+	{
+		position:fixed;
+		top: 300px;
+		left: 200px;
+	}
+	
+	p.button 
+	{
+    line-height: 1;
+    text-decoration:none;
+    display: inline-block;
+    padding: 8px 12px;
+    font-family: Arial, sans-serif;
+    text-transform:uppercase;
+    font-size:22px;
+    letter-spacing:1px;
+    color:#fff;
+    cursor:pointer;
+    }
 	</style>
   </head>
-  <body>
+  <body background="images/bback.gif" style="background-attachment: fixed">
    <div>
-    
-      <form name="form1" method="post" action="launchInst.php" >
+  <p class = "video"> <video width="480" height="320" src="http://root:root@192.168.1.40/axis-cgi/mjpg/video.cgi?resolution=640x480&req_fps=30&.mjpg" controls="controls">
+     your browser does not support the video tag
+   </video>
+  </p>
+   
+   <p class = "two"><a href="http://192.168.1.40">IP Camera Control Page</a>   </p>
+    <a href="http://root:root@192.168.1.40/axis-cgi/mjpg/video.cgi?resolution=640x480&req_fps=30&.mjpg" >Video Page</a> 
+       <form name="form1" method="post" action="test.php" >
         <p class="one">
           <input type="submit" value="track" name="sub" />
         </p>  
-        <p class="two">
+<!--         <p class="two">
           <input type="submit" value="chooseTrack" name="sub" />
         </p>    
         <p class="three">   
           <input type="submit" value="drawTrack" name="sub" />
-        </p>   
-        
-      </form>
+        </p>   --> 
+	   </form>
+       <p class="parm2">Copyright &copy; 2007-2012 SI GROUP All Rights Reserved &emsp; &emsp; &emsp;SJTU Embedded System Lab&emsp; &emsp;<a href="http://202.120.40.124" target="_blank">Group Page Link</a></p>
    </div>
   </body>
 </html>
